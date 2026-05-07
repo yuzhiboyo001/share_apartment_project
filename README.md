@@ -82,14 +82,13 @@ apartment_fastapi  | 全部配置已完成
 （该部分可能会因为网络原因下载失败，可以去掉镜像源，找个梯子自行设置SOCKS5 代理端口，下载过程中会更稳定）
 
 访问地址
-主要操作界面	http://localhost	
-
+服务	地址
+主要操作界面	http://localhost
 默认账号
 角色	手机号	密码
 管理员	13800138000	123456
 租客	13800138001	123456
-
- AI 助手功能
+🤖 AI 助手功能
 小唐人塔菲智能问答：基于公寓管理制度文档回答问题
 
 双模式：支持本地 Ollama 和云端 DeepSeek API
@@ -103,12 +102,13 @@ rag_chain = create_rag_chain(rag_retriever, exchange=True)
 
 # 云端 API 模式
 rag_chain = create_rag_chain(rag_retriever, exchange=False)
-
-RAG链路模块：
+📊 RAG 链路模块
+模块	说明
 多路检索	向量检索 + BM25 关键词检索融合
 重排序	BGE-reranker 模型精排
-查询改写，口语化转正式表达
-文档分块，按语义切分，保留上下文
-知识库文档路径：fastapi/test_docs（因为里面也塞了与公司相关的测试文档进去，LLM模型输出可能不完全只包含公寓内容）
+查询改写	口语化转正式表达
+文档分块	按语义切分，保留上下文
+📝 知识库文档路径：fastapi/test_docs（里面也塞了与公司相关的测试文档进去，LLM模型输出可能不完全只包含公寓内容）
 
+作者
 yuzhiboyo001
