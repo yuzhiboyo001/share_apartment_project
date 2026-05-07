@@ -1,5 +1,8 @@
 公寓管理系统+小糖人塔菲AI公寓助手
 
+预览图如下：
+<img width="2549" height="1403" alt="image" src="https://github.com/user-attachments/assets/9d6d9279-bf74-4f13-8dde-aaeede336a67" />
+
 本项目是基于集成了 **RAG（重排序+多路检索）模块的LLM模型** AI公寓助手的智能公寓管理系统，
 集成了 **Vue 3** 前端、**Spring Boot** 后端和 **FastAPI** AI 服务，支持文档智能问答、公寓管理、账单统计等功能。
 
