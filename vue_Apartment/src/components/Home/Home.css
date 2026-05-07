@@ -1,0 +1,701 @@
+.empty-table {
+  padding: 30px 0;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty-chart {
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.small {
+    height: 300px;
+  }
+}
+
+.empty-tip {
+  color: #909399;
+  font-size: 13px;
+  margin-top: 5px;
+}
+.home {
+  height: 100%;
+  overflow-y: auto;
+  padding: 0 10px 20px 10px;
+  box-sizing: border-box;
+
+  .user {
+    display: flex;
+    align-items: center;
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #f0f0f0;
+
+    .user-avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin-right: 16px;
+      border: 2px solid #d3c4d4;
+    }
+
+    .user-info {
+      .user-info-admin {
+        font-size: 30px;
+        font-weight: bold;
+        margin: 0 0 10px 0;
+      }
+      .user-info-p {
+        color: #999;
+        margin: 0;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .login-info {
+    p {
+      display: flex;
+      justify-content: space-between;
+      line-height: 26px;
+      font-size: 13px;
+      color: #666;
+      margin: 0;
+
+      .label {
+        color: #999;
+      }
+      .value {
+        color: #333;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .card-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #333;
+  }
+
+  .user-table {
+    margin-top: 16px;
+
+    :deep(.el-table) {
+      font-size: 13px;
+    }
+  }
+
+  .overview-card {
+    margin-top: 16px;
+
+    .overview-stats {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      .stat-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+
+        .stat-label {
+          color: #666;
+        }
+
+        .stat-value {
+          font-weight: 600;
+
+          &.paid {
+            color: #67c23a;
+          }
+          &.unpaid {
+            color: #f56c6c;
+          }
+        }
+      }
+    }
+  }
+
+  .tenant-table {
+    margin-bottom: 16px;
+
+    :deep(.el-table) {
+      font-size: 12px;
+    }
+  }
+
+  .graph {
+    display: flex;
+    justify-content: space-between;
+    gap: 2%;
+
+    .el-card {
+      flex: 1;
+    }
+  }
+
+  .carousel-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: rgba(250, 249, 249, 0.929);
+    cursor: pointer;
+
+    .carousel-image {
+      position: relative;
+      max-width: 85%;
+      max-height: 85%;
+      object-fit: contain;
+      z-index: 2;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      border: 1px solid #e0e0e0;
+      transition: transform 0.2s;
+
+      &:hover {
+        transform: scale(1.03);
+      }
+    }
+  }
+}
+
+@media (max-width: 1366px) {
+  .home {
+    .user {
+      .user-avatar {
+        width: 70px;
+        height: 70px;
+        margin-right: 12px;
+      }
+
+      .user-info {
+        .user-info-admin {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  /* 缴费对话框样式 */
+  .payment-dialog {
+    border-radius: 12px;
+  }
+
+  .payment-dialog :deep(.el-dialog__header) {
+    text-align: center;
+    padding: 20px 20px 10px;
+    font-weight: 600;
+    font-size: 18px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .payment-dialog :deep(.el-dialog__body) {
+    padding: 20px 25px;
+  }
+
+  .payment-dialog-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .payment-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #fff5f5 0%, #ffeaea 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(245, 108, 108, 0.15);
+  }
+
+  .bill-detail-card {
+    width: 100%;
+    background: #f9f9f9;
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin-bottom: 20px;
+    border: 1px solid #f0f0f0;
+  }
+
+  .bill-detail-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px dashed #e0e0e0;
+  }
+
+  .bill-detail-item:last-child {
+    border-bottom: none;
+  }
+
+  .bill-detail-item.highlight {
+    margin-top: 4px;
+    padding-top: 12px;
+    border-top: 2px solid #ffd7d7;
+  }
+
+  .detail-label {
+    color: #666;
+    font-size: 14px;
+  }
+
+  .detail-value {
+    color: #333;
+    font-weight: 500;
+    font-size: 15px;
+  }
+
+  .detail-value.amount {
+    color: #f56c6c;
+    font-size: 22px;
+    font-weight: bold;
+  }
+
+  .payment-tip {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #f5f7fa;
+    padding: 10px 15px;
+    border-radius: 8px;
+    width: 100%;
+    color: #909399;
+    font-size: 13px;
+  }
+
+  .dialog-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 0 10px 20px;
+  }
+
+  .dialog-footer .el-button {
+    flex: 1;
+    border-radius: 30px;
+    height: 42px;
+  }
+
+  .dialog-footer .el-button--danger {
+    background: linear-gradient(135deg, #f56c6c, #f78989);
+    border: none;
+    box-shadow: 0 4px 12px rgba(245, 108, 108, 0.3);
+  }
+
+  .dialog-footer .el-button--danger:hover {
+    background: linear-gradient(135deg, #f78989, #f56c6c);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(245, 108, 108, 0.4);
+  }
+}
+
+.join-apartment-card {
+  margin-top: 16px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+
+  .join-apartment {
+    text-align: center;
+
+    .join-icon {
+      font-size: 48px;
+      color: #409eff;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      color: #333;
+    }
+
+    .join-desc {
+      color: #666;
+      font-size: 14px;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+
+    .dismiss-btn {
+      margin-top: 10px;
+      color: #999;
+    }
+  }
+}
+
+.first-login-dialog {
+  text-align: center;
+
+  .first-login-content {
+    padding: 10px 0;
+
+    .welcome-icon {
+      font-size: 64px;
+      color: #e6a23c;
+      margin-bottom: 15px;
+    }
+
+    h2 {
+      margin: 0 0 10px;
+      font-size: 22px;
+      color: #333;
+    }
+
+    p {
+      color: #666;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .action-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+
+    .tip {
+      font-size: 12px;
+      color: #999;
+      margin: 0;
+    }
+  }
+}
+.join-dialog {
+  border-radius: 16px;
+
+  :deep(.el-dialog__header) {
+    text-align: center;
+    padding: 25px 20px 15px;
+    margin: 0;
+    font-weight: 600;
+    font-size: 20px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  :deep(.el-dialog__body) {
+    padding: 20px 25px;
+  }
+}
+
+/* 步骤指示器 */
+.steps-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  padding: 0 10px;
+}
+
+.step-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+
+  .step-number {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #f0f0f0;
+    color: #999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    margin-bottom: 6px;
+    transition: all 0.3s;
+
+    &.completed {
+      background: #67c23a;
+      color: white;
+    }
+  }
+
+  .step-label {
+    font-size: 13px;
+    color: #999;
+    transition: all 0.3s;
+  }
+
+  &.active {
+    .step-number {
+      background: #409eff;
+      color: white;
+    }
+    .step-label {
+      color: #409eff;
+      font-weight: 500;
+    }
+  }
+}
+
+.step-line {
+  width: 60px;
+  height: 2px;
+  background: #f0f0f0;
+  margin: 0 10px;
+  transition: all 0.3s;
+
+  &.active {
+    background: #67c23a;
+  }
+}
+
+/* 步骤内容 */
+.step-content {
+  min-height: 320px;
+}
+
+/* 邀请提示 */
+.invite-tip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #ecf5ff;
+  padding: 12px 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  color: #409eff;
+  font-size: 13px;
+
+  .tip-icon {
+    font-size: 16px;
+  }
+}
+
+/* 公寓信息卡片 */
+.apartment-card {
+  background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+  border-radius: 12px;
+  padding: 18px;
+  margin-bottom: 20px;
+  border: 1px solid #e0e0e0;
+
+  .apartment-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+
+    .apartment-icon {
+      font-size: 32px;
+      color: #409eff;
+      background: rgba(64, 158, 255, 0.1);
+      padding: 8px;
+      border-radius: 10px;
+    }
+
+    .apartment-title {
+      flex: 1;
+
+      h3 {
+        margin: 0 0 5px;
+        font-size: 18px;
+        color: #333;
+      }
+
+      .apartment-status {
+        font-size: 12px;
+        padding: 2px 8px;
+        border-radius: 12px;
+        background: #f0f0f0;
+        color: #999;
+
+        &.active {
+          background: #e1f3d8;
+          color: #67c23a;
+        }
+      }
+    }
+  }
+
+  .apartment-details {
+    .detail-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 0;
+      color: #666;
+      font-size: 13px;
+
+      .el-icon {
+        color: #999;
+        font-size: 14px;
+      }
+
+      span {
+        flex: 1;
+      }
+    }
+  }
+}
+
+/* 房间选择器 */
+.room-selector {
+  .room-selector-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+
+    .room-selector-title {
+      font-weight: 600;
+      color: #333;
+    }
+
+    .room-stats {
+      font-size: 12px;
+      color: #999;
+      background: #f5f5f5;
+      padding: 4px 10px;
+      border-radius: 20px;
+    }
+  }
+
+  .room-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-height: 240px;
+    overflow-y: auto;
+    padding-right: 5px;
+
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #ddd;
+      border-radius: 2px;
+    }
+  }
+
+  .room-item {
+    width: 100%;
+    margin-right: 0;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 12px 15px;
+    transition: all 0.3s;
+
+    &:hover {
+      border-color: #409eff;
+      background: #f5faff;
+    }
+
+    &.is-disabled {
+      background: #f5f5f5;
+      border-color: #e0e0e0;
+      opacity: 0.7;
+
+      .room-info {
+        .room-name {
+          color: #999;
+        }
+      }
+    }
+
+    .room-info {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      width: 100%;
+
+      .room-name {
+        font-weight: 600;
+        color: #333;
+        min-width: 60px;
+      }
+
+      .room-area {
+        color: #f56c6c;
+        font-weight: 500;
+        font-size: 14px;
+        min-width: 60px;
+      }
+
+      .room-status {
+        font-size: 12px;
+        padding: 2px 8px;
+        border-radius: 12px;
+        background: #e1f3d8;
+        color: #67c23a;
+        min-width: 60px;
+        text-align: center;
+
+        &.occupied {
+          background: #fdf0f0;
+          color: #f56c6c;
+        }
+      }
+
+      .room-tenant {
+        font-size: 12px;
+        color: #999;
+        flex: 1;
+        text-align: right;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+}
+
+/* 无房间提示 */
+.no-rooms {
+  text-align: center;
+  padding: 20px 0;
+
+  .no-rooms-tip {
+    color: #999;
+    font-size: 13px;
+    margin-top: 10px;
+  }
+}
+
+/* 步骤操作按钮 */
+.step-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 25px;
+  padding-top: 15px;
+  border-top: 1px solid #f0f0f0;
+
+  .el-button {
+    min-width: 100px;
+    height: 40px;
+    border-radius: 20px;
+  }
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .room-item {
+    .room-info {
+      flex-wrap: wrap;
+      gap: 8px;
+
+      .room-tenant {
+        width: 100%;
+        text-align: left;
+      }
+    }
+  }
+}
