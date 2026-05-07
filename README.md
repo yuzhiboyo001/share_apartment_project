@@ -15,15 +15,14 @@
 | 部署 | Docker、Docker Compose |
 | RAG 优化 | 多路检索、BM25、重排序（BGE-reranker） |
 
-## 项目结构
-share_apartment_project/
-│
-├── vue_Apartment/               # Vue 3 前端
-├── springboot_Apartment/        # Spring Boot 后端
-├── fastapi_AI/                  # FastAPI AI 服务（RAG）
-├── docker-compose.yml           # Docker 编排文件
-├── shared_apartment.sql         # 数据库初始化脚本
-└── .env.example                 # 环境变量模板
+项目结构
+目录/文件	说明
+vue_Apartment/	Vue 3 前端
+springboot_Apartment/	Spring Boot 后端
+fastapi_AI/	FastAPI AI 服务（RAG）
+docker-compose.yml	Docker 编排文件
+shared_apartment.sql	数据库初始化脚本
+.env.example	环境变量模板
 
 
 ## 快速搭建
@@ -55,7 +54,6 @@ LLM 本地模型（deepseek-7b-chat）需要单独下载，或直接使用云端
 
 如果 Docker 拉取镜像较慢，可在 Docker Desktop → Settings → Docker Engine 中添加：
 
-```json
 {
   "registry-mirrors": [
     "https://docker.xuanyuan.me",
@@ -63,7 +61,6 @@ LLM 本地模型（deepseek-7b-chat）需要单独下载，或直接使用云端
     "https://docker.m.daocloud.io"
   ]
 }
-```
 
 全部服务启动后需等待1分钟左右创建数据库和插入相关数据
 另外最好实时查看fastapi日志：
