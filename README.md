@@ -109,15 +109,14 @@ rag_chain = create_rag_chain(rag_retriever, exchange=True)
 
 # 云端 API 模式
 rag_chain = create_rag_chain(rag_retriever, exchange=False)
-📊 RAG 链路模块
+```
+RAG 链路模块
 模块	说明
 多路检索	向量检索 + BM25 关键词检索融合
 重排序	BGE-reranker 模型精排
 查询改写	口语化转正式表达
 文档分块	按语义切分，保留上下文
-📝 知识库文档路径：fastapi/test_docs（里面也塞了与公司相关的测试文档，LLM 模型输出可能不完全只包含公寓内容）
+知识库文档路径：fastapi/test_docs（里面也塞了与公司相关的测试文档，LLM 模型输出可能不完全只包含公寓内容）
 
-作者
+# 作者
 yuzhiboyo001
-
-text
