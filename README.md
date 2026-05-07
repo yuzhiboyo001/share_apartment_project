@@ -46,15 +46,22 @@ cd share_apartment_project
 
 # 启动所有服务
 docker-compose up -d
-首次启动会自动下载 AI 相关模型（约 2GB），请耐心等待。
-LLM本地模型需要自己额外下载，可以直接使用deepseek的云端API。
+首次启动会自动下载 AI 相关模型（约 2GB），请耐心等待
 
-# docker镜像源推荐：
- "registry-mirrors": [
+LLM 本地模型（deepseek-7b-chat）需要单独下载，或直接使用云端 API
+
+全部服务启动后需等待约 1 分钟，用于创建数据库和插入相关数据
+
+如果 Docker 拉取镜像较慢，可在 Docker Desktop → Settings → Docker Engine 中添加：
+
+```json
+{
+  "registry-mirrors": [
     "https://docker.xuanyuan.me",
     "https://docker.1ms.run",
     "https://docker.m.daocloud.io"
   ]
+}
 
 全部服务启动后需等待1分钟左右创建数据库和插入相关数据
 另外最好实时查看fastapi日志：
@@ -100,3 +107,5 @@ RAG链路模块：
 查询改写，口语化转正式表达
 文档分块，按语义切分，保留上下文
 知识库文档路径：fastapi/test_docs（因为里面也塞了与公司相关的测试文档进去，LLM模型输出可能不完全只包含公寓内容）
+
+yuzhiboyo001
