@@ -77,7 +77,7 @@ apartment_fastapi  | INFO:     Waiting for application startup.
 apartment_fastapi  | INFO:     Application startup complete.
 apartment_fastapi  | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
 apartment_fastapi  | 全部配置已完成
-
+```
 当日志显示以上形式时，服务将正常运行。
 （该部分可能会因为网络原因下载失败，可以去掉镜像源，找个梯子自行设置SOCKS5 代理端口，下载过程中会更稳定）
 
