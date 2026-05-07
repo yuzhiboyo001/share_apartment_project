@@ -1,4 +1,4 @@
-公寓管理系统+小糖人塔菲AI公寓助手
+# 公寓管理系统+小糖人塔菲AI公寓助手
 
 **预览图**：
 <img width="2549" height="1403" alt="image" src="https://github.com/user-attachments/assets/20cc003a-40fa-4af3-9b3c-2dc73a820513" />
@@ -94,7 +94,7 @@ apartment_fastapi  | 全部配置已完成
 | 管理员 | 13800138000 | 123456 |
 | 租客 | 13800138001 | 123456 |
 
-## 🤖 AI 助手功能
+##  AI 助手功能
 
 - 小糖人塔菲智能问答：基于公寓管理制度文档回答问题
 - 双模式：支持本地 Ollama 和云端 DeepSeek API
@@ -110,7 +110,7 @@ rag_chain = create_rag_chain(rag_retriever, exchange=True)
 # 云端 API 模式
 rag_chain = create_rag_chain(rag_retriever, exchange=False)
 ```
-## 📊 RAG 链路模块
+##  RAG 链路模块
 
 | 模块 | 说明 |
 |------|------|
